@@ -1,4 +1,42 @@
+import { expect } from 'chai';
+import Trie from '../lib/Trie'
+import Node from '../lib/Node'
 
+describe('TRIE', () => {
+  let trie;
+
+  beforeEach(() => {
+    trie = new Trie();
+  });
+
+  it('should exist', () => {
+    expect(trie).to.exist;
+  })
+
+  it('should start with zero elements', () => {
+    expect(trie.totalWords).to.equal(0);
+  });
+
+  it('should set its default root to empty object', () => {
+    expect(trie.root.children).to.deep.eq({});
+  });
+
+  it('should increase totalWords each time we instantiate a new word', () => {
+    expect(trie.totalWords).to.eq(0);
+    trie.insert('word')
+    expect(trie.totalWords).to.eq(1)
+  });
+
+it ('should insert word correctly when calling insert', () => {
+    trie.insert ('hello');
+    trie.insert ('cool')
+    trie.insert ('loop')
+    // console.log(JSON.stringify(trie, null, 4))
+    expect(Object.keys(trie.root.children)).to.deep.eq([ 'h', 'c', 'l' ]);
+  });
+
+
+ });
 
 
 
