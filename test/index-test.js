@@ -1,7 +1,37 @@
-import { assert } from 'chai';
+// const { assert } = require('chai');
+// const Trie = require('../lib/index.js');
+// const Node = require('../lib/Node.js');
+// let trie;
+
     
- describe('test', function() {
-   it('should return true', function() {
-     assert.equal(true, true);
-   });
- });
+// beforeEach(() => {
+// 	trie = new Trie;
+// });
+
+// // Phase 1
+
+//  describe('test', function() {
+//    it('should return true', function() {
+//      assert.equal(true, true);
+//    });
+
+//  describe('count', function() {
+//  		it('should keep count of how many words have been inserted', function(){
+//  			trie.insert('word1');
+//  			trie.insert('word2')
+//  			assert.equal(trie.totalWords, 2);
+//  		});
+//  });
+
+//  describe('insert', function() {
+//  		it('should take a string as a parameter', function() {
+//  			trie.insert('word');
+//  			assert.isNotNull(trie.head);
+//  		});
+//  });
+
+// // Phase 1
+
+
+
+//  });
