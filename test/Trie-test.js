@@ -24,36 +24,37 @@ describe('count', () => {
 
 
 describe('insert', () => {
-	it('should increment wordcount by 1 each time', () => {
+	it.skip('should increment wordcount by 1 each time', () => {
 		trie.insert('sassfactory');
 		trie.insert('detroit');
 		expect(trie.totalWords, 2);
 	});
 });
 
-describe('insert recursive', () => {
+describe.skip('insert recursive', () => {
 	it('should return a word', () => {
 	
-	})
+	});
 
-	it('should insert a word when invoking insert', () => {
+	it.skip('should insert a word when invoking insert', () => {
 		trie.insert('hello');
 		trie.insert('cool');
 		trie.insert('popeyes');
 		console.log(JSON.stringify(trie.root, null, 4));
 		expect(Object.keys(trie.root.children)).to.deep.equal(['h', 'c', 'p']);
-	})
+	});
 
 
 	it('should check child', () => {
 		trie.insert('hello');
 		trie.insert('hellen');
+		trie.suggest('he');
 
-
-		// console.log(JSON.stringify(trie.root, null, 4));
+	// console.log(currentNode)
+		// console.log(JSON.stringify(currentNode, null, 4));
 		// console.log(Object.keys(trie.root.children));
 		// expect(Object.keys(trie.root.children)).to.deep.equal(['h', 'c', 'p']);
-	})
+	});
 
 
 });
