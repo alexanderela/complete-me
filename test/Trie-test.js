@@ -31,7 +31,7 @@ describe('insert', () => {
 	});
 });
 
-describe.skip('insert recursive', () => {
+describe('insert recursive', () => {
 	it('should return a word', () => {
 	
 	});
@@ -46,14 +46,17 @@ describe.skip('insert recursive', () => {
 
 
 	it('should check child', () => {
+		trie.insert('hey');
 		trie.insert('hello');
-		trie.insert('hellen');
-		trie.suggest('he');
+		trie.insert('hello');
 
-	// console.log(currentNode)
+		trie.suggest ('he')
+
+		// expect(trie.finalArray).to.deep.equal(['hello', 'hellen']);
+
 		// console.log(JSON.stringify(currentNode, null, 4));
 		// console.log(Object.keys(trie.root.children));
-		// expect(Object.keys(trie.root.children)).to.deep.equal(['h', 'c', 'p']);
+;
 	});
 
 
