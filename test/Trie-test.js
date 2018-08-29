@@ -36,7 +36,7 @@ describe('insert recursive', () => {
 	
 	});
 
-	it.skip('should insert a word when invoking insert', () => {
+	it('should insert a word when invoking insert', () => {
 		trie.insert('hello');
 		trie.insert('cool');
 		trie.insert('popeyes');
@@ -45,10 +45,14 @@ describe('insert recursive', () => {
 	});
 
 
-	it('should check child', () => {
+
+	// Add 'he' and check return in final array
+
+
+	it('should return an array of word suggestions based on recent searches', () => {
 		trie.insert('hey');
 		trie.insert('hello');
-		trie.insert('hello');
+		trie.insert('hells');
 
 		trie.suggest ('he')
 
@@ -56,7 +60,7 @@ describe('insert recursive', () => {
 
 		// console.log(JSON.stringify(currentNode, null, 4));
 		// console.log(Object.keys(trie.root.children));
-;
+
 	});
 
 
