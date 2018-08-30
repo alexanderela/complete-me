@@ -26,10 +26,11 @@ describe('Insert', () => {
 	});
 
 	it('should insert a word when invoking insert', () => {
-		trie.insert('hello');
-		trie.insert('cool');
-		trie.insert('popeyes');
-		expect(Object.keys(trie.root.children)).to.deep.equal(['h', 'c', 'p']);
+		trie.insert('nursery');
+		trie.insert('harold');
+		trie.insert('covfefe');
+		trie.insert('esplanade');
+		expect(Object.keys(trie.root.children)).to.deep.equal(['n', 'h', 'c', 'e']);
 	});
 });
 
