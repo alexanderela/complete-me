@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import Node from '../lib/Node';
 
-describe('NODE', () => {
+describe('Node', () => {
   let node;
 
   beforeEach(() => {
@@ -19,4 +19,8 @@ describe('NODE', () => {
   it('should default children to an empty object', () => {
     expect(node.children).to.deep.equal({});
   })
+
+  // it('should have a word property', () => {
+  // 	expect(node.word).to.exist;
+  // })
 })
