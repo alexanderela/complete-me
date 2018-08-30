@@ -40,7 +40,6 @@ describe('Suggest', () => {
 		trie.insert('hendrix');
 		trie.insert('henderson');
 		trie.insert('hexagon');
-
 		expect(trie.suggest('he')).to.deep.equal(['hello', 'hellen', 'hendrix', 'henderson', 'hexagon']);
 	});
 });
